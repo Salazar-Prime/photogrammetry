@@ -1,0 +1,131 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Program Description</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong><img src="bascimages/txt-description.gif" width="186" height="21"></strong></font></div></td>
+  </tr>
+  <tr> 
+    <td><p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+        bundle adjustment software processes images captured by frame analog and 
+        digital cameras. Supplemental data like GPS/INS and point-to-point distance 
+        measurements can be also incorporated.</font></p>
+      <p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        BASC witnessed a dramatic revamping during its development cycle. The 
+        software is comprised of modular and independent C++/MFC core garnished 
+        with a standalone interface built in the new &#8220;MS.NET&#8221; development 
+        environment:</font></p>
+      <p align="center"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        <img src="bascimages/flowchart.jpg" width="409" height="235"></font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Modularity 
+        and extensibility of BASC were always a vital concern during its development. 
+        Object oriented design is fully adopted and C++/MFC Classes are the basic 
+        building blocks for its functionality. These classes are further divided 
+        into methods and properties that serve as lower level sub-task implementation 
+        units. BASC has separate classes to handle camera information, orientation 
+        of images, points measured on images, ground points, GPS/INS information, 
+        and pre-known distances between object space points. A special math library 
+        embedded with the program carries out mathematical processing of involved 
+        matrices. </font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        The BASC code is enhanced with more context-sensitive messages that enlighten 
+        the user about some run-time errors or data impurities/blunders. To prepare 
+        the input data for the program, which is furnished through standard ASCII 
+        files, information from the involved cameras, images, control/tie points, 
+        etc. is first gathered and formatted. Such information is divided between 
+        a number of separate text files to avoid ambiguity and enhance flexibility 
+        and variety in use. These files are interactively specified to the program 
+        during the execution session. Certain input files may not be required 
+        for a particular application based on the options selected in the main 
+        controlling data input file, namely, the <a href="basc_input_ProjectFile.html">Project 
+        File</a>. </font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Follow 
+        the links for full description of the structure of <a href="basc_input_data.html">input</a> 
+        and <a href="basc_output.html">output</a> files.</font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        The interface allows for easier specification of input files where last 
+        minute editing and tweaking can be easily performed. After concluding 
+        the computation phase, output browsing and inspection both textually or 
+        visually became a breeze. The interface links the user to an easy-to-update 
+        background literature and help system implemented in the form of webpage 
+        dedicated for this purpose. Click <a href="basc_interface.html">here</a> 
+        for more details and snapshots of the interface.</font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        Due to the specific nature of gathered input information, BASC has the 
+        capacity to treat the involved parameters either as:<br>
+        <br>
+        &#8226; Constants (perfectly known quantities), <br>
+        &#8226; Parameters with prior knowledge of certain accuracy, or <br>
+        &#8226; Variables (unknowns). <br>
+        </font></p>
+      <p align="center"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="bascimages/image016.jpg" width="140" height="76"></font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        This is done through setting threshold variances in the main <a href="basc_input_ProjectFile.html">project 
+        file</a>. </font><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+        dispersion of the parameters is specified in the relevant data file, specifically: 
+        </font></p>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="basc_input_GcpFile.html">Ground 
+          Control Points File</a>,</font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="basc_input_CamFile.html">Camera 
+          File</a>,</font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><a href="basc_input_OriFile.html">Orientation 
+          File</a>,</font></li>
+        <li><a href="basc_input_GpsFile.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">GPS 
+          File,</font></a><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          and</font></li>
+        <li><a href="basc_input_DistFile.html"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Distance 
+          File.</font></a></li>
+      </ul>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">For 
+        more details on this subject, please see the <a href="basc_input_ProjectFile.html">Project 
+        File</a> help section.</font></p></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>

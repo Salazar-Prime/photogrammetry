@@ -1,0 +1,195 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Input Data - Ground Control Points File</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"> 
+        <p><img src="bascimages/txt-input-gcpfile.gif" width="239" height="19"><br>
+          (*.gcp)</p>
+        </div></td>
+  </tr>
+  <tr> 
+    <td>
+<p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+        file contains the data for the ground control and tie points along with 
+        their covariance (3x3 matrix).&nbsp;Keep in mind the values of minCov1 
+        and minCov2 (specified in the project file) when designating your covariance 
+        matrices.&nbsp;The format is: </font></p>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;Point 
+          ID: It cannot contain any white space within its string (see example 
+          below).</font></li>
+      </ul>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;X, 
+          Y, Z: the ground coordinate of the point</font></li>
+      </ul>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;3x3 
+          dispersion matrix: the dispersion of the object point coordinates</font></li>
+      </ul>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Example: 
+        </strong></font></p>
+      <p><font size="1" face="Verdana, Arial, Helvetica, sans-serif">! In Project File minCov = 
+        1e+4 and minCov2 = 1e-7<br>
+        !<br>
+        ! <br>
+        ! <br>
+        !Point ID X Y Z Dispersion<br>
+        1 0.0 0.0 0.0 0.25e+06 0.0 0.0 0.0 0.<br>
+        2 0.25e-03 0.0 0.0 0.0 0.25e-03 0.0 0.0 0.0 0.25e-03<br>
+        3 0.25e-10 0.0 0.0 0.0 0.25e-10 0.0 0.0 0.0 0.25e-10<br>
+        </font> </p>
+      <table border="0">
+        <tr> 
+          <td colspan="13"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">! 
+            In Project File minCov = 1E+4 and minCov2 = 1E-7</font></td>
+        </tr>
+        <tr> 
+          <td colspan="13"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+            !Point 1 has its X, Y, and Z values as variables (tie point) since 
+            their dispersions fall above minCov value</font></td>
+        </tr>
+        <tr> 
+          <td colspan="13"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">! 
+            Point 2 has its X, Y, and Z values with prior stochastic information 
+            since their dispersions fall below minCov </font></td>
+        </tr>
+        <tr> 
+          <td colspan="13"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!and 
+            above minCov2</font></td>
+        </tr>
+        <tr> 
+          <td colspan="13"><p><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!Point 
+              3 has its X, Y, and Z values as fixed (well trusted control point) 
+              since their dispersions fall below minCov2</font></p></td>
+        </tr>
+        <tr> 
+          <td width="51"><div align="left"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!Point 
+              ID</font></div></td>
+          <td width="79"> <div align="center"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">X</font></div></td>
+          <td width="85"> <div align="center"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">Y</font></div></td>
+          <td width="44"> <div align="center"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">Z&nbsp;</font></div></td>
+          <td colspan="9"><div align="center"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">Dispersion</font></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1</font></div></td>
+          <td width="79"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.633540</font></div></td>
+          <td width="85"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">2.442396</font></div></td>
+          <td width="44"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.625401</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e+06</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e+06</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="34"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;0.0</font></div></td>
+          <td width="43"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e+06</font></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">2</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.934490</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">2.442919</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.627351</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-03</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-03</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-03</font></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">3</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.347665</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">2.444523</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.630493</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-10</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-10</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.25e-10</font></div></td>
+        </tr>
+        <tr> 
+          <td><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif"><font size="1">...</font></font></div></td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+      <p><img src="../images/spacer.gif" width="10" height="40"></p></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_inputfile-bar.lbi" --><img src="bascimages/basc-inputfile-bar.gif" name="basc_inputfile_bar" width="603" height="42" border="0" usemap="#basc_inputfile_bar" id="basc_inputfile_bar"> 
+<map name="basc_inputfile_bar">
+  <area shape="rect" coords="2,13,42,40" href="basc_input_ProjectFile.html">
+  <area shape="rect" coords="68,14,173,41" href="basc_input_IcfFile.html">
+  <area shape="rect" coords="198,14,291,41" href="basc_input_GcpFile.html">
+  <area shape="rect" coords="311,14,362,42" href="basc_input_CamFile.html">
+  <area shape="rect" coords="383,14,451,43" href="basc_input_OriFile.html">
+  <area shape="rect" coords="473,14,529,42" href="basc_input_GpsFile.html">
+  <area shape="rect" coords="552,14,603,44" href="basc_input_DistFile.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>

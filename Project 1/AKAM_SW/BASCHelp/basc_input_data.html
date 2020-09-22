@@ -1,0 +1,126 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Input Data</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="bascimages/txt-input.gif" width="99" height="21"></font></div></td>
+  </tr>
+  <tr> 
+    <td><p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">The 
+        BASC program requires the use of ASCII files as the input media of needed 
+        data.&nbsp;These input files have specific structure in which data is 
+        arranged. It is crucial to exactly follow this structure to correctly 
+        read the file contents. BASC does not validate the structure of input 
+        files. Examples of such input files are presented after the description 
+        of each file.&nbsp;</font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">A 
+        <font color="#006633">comment</font> line is any line that starts with 
+        the &#8216;<font color="#000000">!</font>&#8217; character. Comment lines 
+        are skipped in all input files. Such comments can be inserted on any line 
+        but not between data elements within a line. Supplemental comments in 
+        the files should not be added, and one should pay attention to the carriage 
+        returns.</font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><strong>Important:<br>
+        </strong></font><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Please 
+        note the following about the system of units used in BASC:</font></p>
+      <div align="justify">
+        <ul>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> All 
+            angles are inputted and outputted in degrees. Variances of such angles 
+            are displayed in arc seconds.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> Image 
+            coordinates can be measured using any unit of choice (mm or pixels) 
+            bearing in mind that the output for the principle distance, principle 
+            point coordinates (xp, yp, c) and distortion parameters will follow 
+            the chosen input units.</font></li>
+          <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif"> All 
+            object space linear information units should be consistent, meters 
+            for example. Such information includes the positional portion of the 
+            EOPs, GPS observations at the aircraft, ground coordinates of object 
+            points, and measured ground distances</font></li>
+        </ul>
+        <font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Mandatory 
+        input files:</strong></font></div>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_ProjectFile.html">Project 
+          File</a></font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_IcfFile.html">Image 
+          Coordinate File</a></font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_GcpFile.html">Ground 
+          Control Points File</a></font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_CamFile.html">Camera 
+          File</a></font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_OriFile.html">Orientation 
+          File</a></font></li>
+      </ul>
+      <p align="justify"></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Optional 
+        input files:</strong></font></p>
+      <p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">Based 
+        on the options entered within the Project File, one or more of the following 
+        input files might be required:</font></p>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_GpsFile.html">GPS/INS 
+          File</a></font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"><a href="basc_input_DistFile.html">Distance 
+          File</a></font></li>
+      </ul></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"> </div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_inputfile-bar.lbi" --><img src="bascimages/basc-inputfile-bar.gif" name="basc_inputfile_bar" width="603" height="42" border="0" usemap="#basc_inputfile_bar" id="basc_inputfile_bar"> 
+<map name="basc_inputfile_bar">
+  <area shape="rect" coords="2,13,42,40" href="basc_input_ProjectFile.html">
+  <area shape="rect" coords="68,14,173,41" href="basc_input_IcfFile.html">
+  <area shape="rect" coords="198,14,291,41" href="basc_input_GcpFile.html">
+  <area shape="rect" coords="311,14,362,42" href="basc_input_CamFile.html">
+  <area shape="rect" coords="383,14,451,43" href="basc_input_OriFile.html">
+  <area shape="rect" coords="473,14,529,42" href="basc_input_GpsFile.html">
+  <area shape="rect" coords="552,14,603,44" href="basc_input_DistFile.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>

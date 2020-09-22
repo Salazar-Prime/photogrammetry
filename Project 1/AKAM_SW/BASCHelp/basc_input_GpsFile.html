@@ -1,0 +1,247 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Input Data - GPS/INS File</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"><img src="bascimages/txt-input-gpsfile.gif" width="118" height="21"><br>
+        <font size="2" face="Verdana, Arial, Helvetica, sans-serif">(*.gps) </font></div></td>
+  </tr>
+  <tr> 
+    <td> 
+      <p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+        file contains the GPS/INS observation and their dispersion versus time. 
+        The data should be organized in the following format:<br>
+        </font></p>
+      <ul>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          GPS time: time at which this reading was taken and should match the 
+          time associated with one of the images in the (*.ori) file.<br>
+          </font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Rotation angles: omega, phi, kappa in degrees obtained from the INS 
+          for this time. If INS is not available, just input zeros to maintain 
+          the format.<br>
+          </font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Dispersion matrix of the rotation angles: 3x3 matrix. If INS is not 
+          available, just input zeros to maintain the format.<br>
+          </font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Position of perspective center: (Xo, Yo, Zo). Also, if only INS is available, 
+          then input zeros for Xo, Yo, Zo to maintain the format.<br>
+          </font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Dispersion of Xo, Yo, Zo: 3x3 matrix. If GPS is not available, just 
+          input zeros to maintain the format.<br>
+          </font><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          </font></li>
+      </ul>
+      </td>
+  </tr>
+  <tr> 
+    <td> 
+      <div align="justify"> 
+        <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Example</strong></font><font size="1"><font size="1"><font face="Verdana, Arial, Helvetica, sans-serif"> 
+          </font></font></font></p>
+        <font size="1"><font size="1"><font face="Verdana, Arial, Helvetica, sans-serif">
+        <table border="0">
+          <tr> 
+            <td><font color="#006600" size="1">!GpsTime</font></td>
+            <td><font color="#006600" size="1">omega</font></td>
+            <td><font color="#006600" size="1">phi</font></td>
+            <td><font color="#006600" size="1">kappa</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">2.0</font></td>
+            <td><font size="1">-1.64</font></td>
+            <td><p><font size="1">-1.26</font></p></td>
+            <td><p><font size="1">-131.51</font></p></td>
+          </tr>
+          <tr> 
+            <td colspan="4"> <p><font color="#006600" size="1">!Dispersion of 
+                <font face="Verdana, Arial, Helvetica, sans-serif"> <img src="bascimages/opk.gif" width="39" height="13"> 
+                </font>(3x3 matrix)</font></p></td>
+          </tr>
+          <tr> 
+            <td> <p><font size="1">1E-6</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-6</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-6</font></p></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font color="#006600" size="1">!Xo</font></td>
+            <td><font color="#006600" size="1">Yo</font></td>
+            <td><font color="#006600" size="1">Zo</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><p><font size="1">512212.48</font></p></td>
+            <td><font size="1">215843.73</font></td>
+            <td><font size="1">2933.40</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td colspan="4"> <p><font color="#006600" size="1">!Dispersion of 
+                Xo,Yo,Zo (3x3 matrix)</font></p></td>
+          </tr>
+          <tr> 
+            <td> <p><font size="1">1E-4</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-4</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-4</font></p></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><font color="#006600" size="1">!----------------------------------------------------------------------------</font></td>
+          </tr>
+          <tr> 
+            <td><font color="#006600" size="1">!GpsTime</font></td>
+            <td><font color="#006600" size="1">omega</font></td>
+            <td><font color="#006600" size="1">phi</font></td>
+            <td><font color="#006600" size="1">kappa</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">2.1</font></td>
+            <td><font size="1">-1.64</font></td>
+            <td><p><font size="1">-1.26</font></p></td>
+            <td><font size="1">-131.51</font></td>
+          </tr>
+          <tr> 
+            <td colspan="4"><font color="#006600" size="1">!Dispersion of<font face="Verdana, Arial, Helvetica, sans-serif"> 
+              </font><img src="bascimages/opk.gif" width="39" height="13"> (3x3 
+              matrix)</font></td>
+          </tr>
+          <tr> 
+            <td> <p><font size="1">1E-6</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-6</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-6</font></p></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font color="#006600" size="1">!Xo</font></td>
+            <td><font color="#006600" size="1">Yo</font></td>
+            <td><font color="#006600" size="1">Zo</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><p><font size="1">512205.63</font></p></td>
+            <td><font size="1">215835.</font></td>
+            <td><p><font size="1">2933.41</font></p></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td colspan="4"> <p><font color="#006600" size="1">!Dispersion of 
+                Xo,Yo,Zo (3x3 matrix)</font></p></td>
+          </tr>
+          <tr> 
+            <td> <p><font size="1">1E-4</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-4</font></p></td>
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+          <tr> 
+            <td><font size="1">0.00</font></td>
+            <td><font size="1">0.00</font></td>
+            <td><p><font size="1">1E-4</font></p></td>
+            <td><font size="1">&nbsp;</font></td>
+          </tr>
+        </table>
+        </font></font></font>
+<p>&nbsp;</p></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_inputfile-bar.lbi" --><img src="bascimages/basc-inputfile-bar.gif" name="basc_inputfile_bar" width="603" height="42" border="0" usemap="#basc_inputfile_bar" id="basc_inputfile_bar"> 
+<map name="basc_inputfile_bar">
+  <area shape="rect" coords="2,13,42,40" href="basc_input_ProjectFile.html">
+  <area shape="rect" coords="68,14,173,41" href="basc_input_IcfFile.html">
+  <area shape="rect" coords="198,14,291,41" href="basc_input_GcpFile.html">
+  <area shape="rect" coords="311,14,362,42" href="basc_input_CamFile.html">
+  <area shape="rect" coords="383,14,451,43" href="basc_input_OriFile.html">
+  <area shape="rect" coords="473,14,529,42" href="basc_input_GpsFile.html">
+  <area shape="rect" coords="552,14,603,44" href="basc_input_DistFile.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>

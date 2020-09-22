@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Input Data - Project File</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"><img src="bascimages/txt-input-projectfile.gif" width="103" height="22"><br>
+        (*.prj) </div></td>
+  </tr>
+  <tr> 
+    <td><p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+        is the main control input text file for a bundle adjustment project. It 
+        can start with a set of comment lines (lines starting with &#8216;!&#8217; 
+        character) describing the project and parameters but no comments are allowed 
+        in or after the data lines. It contains the following parameters in order:</font></p>
+      <table border="1" align="center" cellpadding="4" cellspacing="0">
+        <tr> 
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">1</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">2</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">3</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">4</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">5</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">6</font></p></td>
+          <td><p align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">7</font></p></td>
+        </tr>
+        <tr> 
+          <td height="23"> <div align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">noIter</font></strong></div></td>
+          <td><p align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">maxSigma</font></strong></p></td>
+          <td><p align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">minCov</font></strong></p></td>
+          <td><p align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">minCov2</font></strong></p></td>
+          <td><p align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">gpsAvail</font></strong></p></td>
+          <td><p align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">insAvail</font></strong></p></td>
+          <td><div align="center"><strong><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">distanceAvail</font></strong></div></td>
+        </tr>
+      </table>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">1. 
+        Maximum number of iterations for the bundle adjustment procedure.</font></p>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><br>
+        2. The maximum allowable difference between unit weight variances in successive 
+        iterations. If the difference is less than this value, then the iterations 
+        will stop.<br>
+        </font></p>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">3 
+        &amp; 4. MinCov, and MinCov2: variance thresholds. In the BASC program, 
+        all involved parameters can be treated either as:</font></p>
+      <ul>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          Constants (perfectly known quantities),</font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          Parameters with prior knowledge of certain accuracy, or</font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          Variables (unknowns).<br>
+          </font></li>
+      </ul>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">This 
+        is done according to the threshold variances (minCov and minCov2) as follows:</font></p>
+      <p align="center"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="bascimages/image016.jpg" width="140" height="76"></font></p>
+      <ul>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          Any parameter with a variance greater than minCov will be treated as 
+          variable (unknown).</font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          Parameters with variances smaller than minCov2 will be treated as a 
+          constant (they will not be involved in the adjustment).</font></li>
+        <li><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+          If a parameter has a dispersion matrix element lying between the two 
+          thresholds, it will be considered as a parameter with prior knowledge 
+          of certain accuracy (defined by the dispersion matrix).</font></li>
+      </ul>
+      <p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">5.&nbsp;GPS 
+        availability:&nbsp;Flag to indicate whether or not GPS information at 
+        the exposure station is available.&nbsp;If this information is available, 
+        a <a href="basc_input_GpsFile.html">GPS File</a> (*.gps) should be created.</font></p>
+      <p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">6.&nbsp;INS 
+        availability:&nbsp;Flag to indicate whether or not INS information at 
+        the exposure station is available.&nbsp;If this information is available, 
+        an <a href="basc_input_GpsFile.html">GPS File</a> (*.gps) should be created.</font></p>
+      <p align="justify"><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">7.&nbsp;Distance 
+        availability. A flag that indicates if known distances between object 
+        points are available. In case of the existence pf such distances, a <a href="basc_input_DistFile.html">Distance 
+        File</a> (*.dis) should be prepared. This file contains these distances 
+        and their variances.</font></p>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Example</strong>:</font></p>
+      <p><font color="#006633" size="1" face="Verdana, Arial, Helvetica, sans-serif">! 
+        This is a new bundle adjustment project; the following comments explain 
+        different input values <br>
+        ! and options<br>
+        ! 1. I need to limit the number of iterations to 80<br>
+        ! 2. maxSigma = 1.0E-8<br>
+        ! 3. minCov = 1.0E+4<br>
+        ! 4. minCov2 = 1.0E-7<br>
+        ! 5. No GPS data available,<br>
+        ! 6. No INS data available, and<br>
+        ! 7. No known distances are available<br>
+        ! The data line will be in the following order:<br>
+        ! noIter&gt;&gt; maxSigma&gt;&gt; minCov&gt;&gt; minCov2&gt;&gt; gpsAvail&gt;&gt; 
+        insAvail&gt;&gt; distanceAvail <br>
+        </font><font color="#006633" size="2" face="Verdana, Arial, Helvetica, sans-serif"></font><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"> 
+        </font></p>
+      <table width="231" border="0">
+        <tr> 
+          <td width="7"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="27"> <div align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">80</font></div></td>
+          <td width="39"> <div align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0E-8</font></div></td>
+          <td width="38"> <div align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0E+4</font></div></td>
+          <td width="36"> <div align="center"><font color="#000000" size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0E-7</font></div></td>
+          <td width="15"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div></td>
+          <td width="13"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div></td>
+          <td width="22"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0</font></div></td>
+        </tr>
+      </table>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="bascimages/image017.gif" width="335" height="87"></font></p>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif">In 
+        this example data from GPS/INS and distances is not available.</font></p>
+      <p><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><img src="../images/spacer.gif" width="10" height="40"></font></p></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_inputfile-bar.lbi" --><img src="bascimages/basc-inputfile-bar.gif" name="basc_inputfile_bar" width="603" height="42" border="0" usemap="#basc_inputfile_bar" id="basc_inputfile_bar"> 
+<map name="basc_inputfile_bar">
+  <area shape="rect" coords="2,13,42,40" href="basc_input_ProjectFile.html">
+  <area shape="rect" coords="68,14,173,41" href="basc_input_IcfFile.html">
+  <area shape="rect" coords="198,14,291,41" href="basc_input_GcpFile.html">
+  <area shape="rect" coords="311,14,362,42" href="basc_input_CamFile.html">
+  <area shape="rect" coords="383,14,451,43" href="basc_input_OriFile.html">
+  <area shape="rect" coords="473,14,529,42" href="basc_input_GpsFile.html">
+  <area shape="rect" coords="552,14,603,44" href="basc_input_DistFile.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>

@@ -1,0 +1,276 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>BASC - Input Data - Camera File</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+
+
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+//-->
+</script>
+<link href="../links-1.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<table width="637" border="0" align="center">
+  <tr> 
+    <td><font color="#000000" size="2" face="Verdana, Arial, Helvetica, sans-serif"><!-- #BeginLibraryItem "/Library/basc_title.lbi" --><img src="bascimages/basc_title.jpg" width="637" height="77"><!-- #EndLibraryItem --></font></td>
+  </tr>
+  <tr> 
+    <td height="53"><div align="center"><img src="bascimages/txt-input-camfile.gif" width="117" height="19"><br>
+        ( *.cam)</div></td>
+  </tr>
+  <tr> 
+    <td><p align="justify"><font size="2" face="Verdana, Arial, Helvetica, sans-serif">	
+        This file contains information about the involved cameras in the adjustment. 
+        For each camera used in the project, the following information should 
+        be furnished:</font></p>
+      <ul>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Camera ID: camera identification. It cannot contain any white space 
+          within its string (see example below).</font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Camera type: FRAME. BASC only takes cameras of type FRAME.</font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          xp, yp, c: Camera interior orientation (IO) parameters.</font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          3x3 dispersion matrix of xp, yp and c. </font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          Number of camera distortion parameters, nodist. In BASC nodist should 
+          be 7 as defined by the SMAC model and the covariance matrix should also 
+          be of size 7x7. </font> 
+          <ul>
+            <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+              Camera distortion parameters if nodist &gt; 0</font></li>
+            <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+              Distortion parameters covariance matrix if nodist &gt; 0 (nodist 
+              x nodist matrix).</font></li>
+          </ul>
+        </li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify">GPS 
+          antenna offset from the perspective center (dx, dy, dz) </font></li>
+        <li><font size="2" face="Verdana, Arial, Helvetica, sans-serif" align="justify"> 
+          GPS antenna offset dispersion matrix (3 x 3 matrix) <br>
+          </font></li>
+      </ul>
+      <p><font size="2" face="Verdana, Arial, Helvetica, sans-serif"><strong>Example: 
+        </strong> </font></p>
+      <table border="0">
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">! 
+            cameraID &gt;&gt;&nbsp;Camera &gt;&gt; type&nbsp;&gt;&gt; xp&nbsp;&gt;&gt; 
+            yp&nbsp;&gt;&gt; c</font></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">CAMERA&nbsp;</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">FRAME</font></div></td>
+          <td width="44"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">10</font></div></td>
+          <td colspan="2"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">! 
+            dispersion of xp, yp, c</font></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">25.0e-0</font></div></td>
+          <td width="45"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">25.0e-0</font></div></td>
+          <td width="44"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">25.0e-0</font></div></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+            !-----------------------------------------------------------------------</font></td>
+        </tr>
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!no 
+            of distortion parameters</font></td>
+        </tr>
+        <tr> 
+          <td width="54"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">7</font></td>
+          <td width="45"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="44"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="43"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="45"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="44"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td width="74"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif"> 
+            !values of the distortion parameters</font></td>
+        </tr>
+        <tr> 
+          <td width="54"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td width="45"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0 
+            </font></td>
+          <td width="44"> <p><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></p></td>
+          <td width="43"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td width="45"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td width="44"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td width="74"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+        </tr>
+        <tr> 
+          <td colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!covariance 
+            matrix of the distortion parameters</font></td>
+        </tr>
+        <tr> 
+          <td width="54"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e+2</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54"> <div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+        </tr>
+        <tr> 
+          <td width="54" height="14"> <p align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></p></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="43"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="45"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="44"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></div></td>
+          <td width="74"><div align="center"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1.0e-8</font></div></td>
+        </tr>
+        <tr> 
+          <td height="14" colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!-----------------------------------------------------------------------</font></td>
+        </tr>
+        <tr> 
+          <td height="14" colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!Gps 
+            offset: dx, dy, dz</font></td>
+        </tr>
+        <tr> 
+          <td height="14"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td height="14" colspan="7"><font color="#006600" size="1" face="Verdana, Arial, Helvetica, sans-serif">!covariance 
+            matrix of GPS offset</font></td>
+        </tr>
+        <tr> 
+          <td height="14"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1E-12</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td height="14"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1E-12</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+        <tr> 
+          <td height="14"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">0.0</font></td>
+          <td><font size="1" face="Verdana, Arial, Helvetica, sans-serif">1E-12</font></td>
+          <td colspan="4"><font size="1" face="Verdana, Arial, Helvetica, sans-serif">&nbsp;</font></td>
+        </tr>
+      </table>
+      <p><img src="../images/spacer.gif" width="10" height="40"></p></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="justify"></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_inputfile-bar.lbi" --><img src="bascimages/basc-inputfile-bar.gif" name="basc_inputfile_bar" width="603" height="42" border="0" usemap="#basc_inputfile_bar" id="basc_inputfile_bar"> 
+<map name="basc_inputfile_bar">
+  <area shape="rect" coords="2,13,42,40" href="basc_input_ProjectFile.html">
+  <area shape="rect" coords="68,14,173,41" href="basc_input_IcfFile.html">
+  <area shape="rect" coords="198,14,291,41" href="basc_input_GcpFile.html">
+  <area shape="rect" coords="311,14,362,42" href="basc_input_CamFile.html">
+  <area shape="rect" coords="383,14,451,43" href="basc_input_OriFile.html">
+  <area shape="rect" coords="473,14,529,42" href="basc_input_GpsFile.html">
+  <area shape="rect" coords="552,14,603,44" href="basc_input_DistFile.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+  <tr> 
+    <td><div align="center"><!-- #BeginLibraryItem "/Library/basc_bottom_bar.lbi" --><img src="bascimages/bottom-bar.jpg" name="bottom_bar" width="619" height="85" border="0" usemap="#bottom_bar" id="bottom_bar"> 
+<map name="bottom_bar">
+  <area shape="rect" coords="270,18,332,83" href="index.html">
+  <area shape="rect" coords="4,36,126,76" href="basc_description.html">
+  <area shape="rect" coords="131,35,262,78" href="basc_interface.html">
+  <area shape="rect" coords="349,35,477,78" href="basc_input_data.html">
+  <area shape="rect" coords="483,35,610,78" href="basc_output.html">
+</map>
+<!-- #EndLibraryItem --></div></td>
+  </tr>
+</table>
+<p>&nbsp; </p>
+</body>
+</html>
