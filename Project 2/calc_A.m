@@ -1,4 +1,4 @@
-function [A] = calc_A(num_GCP,c,OAX,OAY,OAZ,kappa)
+function [A,Nx_mat,Ny_mat,D_mat] = calc_A(num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
 
 %% calcualte rotation
 r = rotation(omega,phi,kappa);
@@ -38,7 +38,7 @@ for i=1:num_GCP
     b6 = Nx/D;
     
     % multipling by c/D^2 before appending into A
-    A(2i-1,:) = [a1,a2,a3,a4,a5,a6]*c/D^2;
-      A(2i,:) = [b1,b2,b3,b4,b5,b6]*c/D^2;
+    A(2*i-1,:) = [a1,a2,a3,a4,a5,a6]*c/D^2;
+      A(2*i,:) = [b1,b2,b3,b4,b5,b6]*c/D^2;
     
 end

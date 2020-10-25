@@ -13,4 +13,10 @@ yp = IOP(2);
  
 % calculate A (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
 [A,Nx,Ny,D] = calc_A(num_GCP,c,OAX,OAY,OAZ,0,pi/4,pi/3);
+
+
+
+
+
+ 
 y = calc_y(dist,xa,ya,xp,yp,c,Nx,Ny,D);

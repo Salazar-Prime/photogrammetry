@@ -1,10 +1,25 @@
-% xa, ya, num_GCP=length()
+% xa, ya, IOP = [xp, yp, c] num_GCP=length(xa), dist=[k1,k2,k3,p1,p2,p3]
+IOP = rand(3,1);
+dist = rand(6,1);
+xa = [];
+ya = [];
+num_GCP = length(xa);
+xp = IOP(1);
+yp = IOP(2);
+ c = IOP(3);
+
 while False
     
-    % calculate A (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
-        % calculate rot
-        % calculate N and D (OAX,OAY,OAZ,rot)
-    A = calc_A;
-        
+    % OAX, OAY, OAZ
+    
+    % calculate A_50x6 (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
+    [A,Nx_mat,Ny_mat,D_mat] = calc_A(num_GCP, c, OAX, OAY, OAZ, omega, phi, kappa);
+    
+    % calculate y_50x1 (dist,xa,ya,xp,yp,c,Nx_mat,Ny_mat,D_mat)
+    y = calc_y();
+    
+    % calculate x_hat
+    P = eye(5);
+    x_hat = 
 end
     
