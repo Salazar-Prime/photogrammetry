@@ -1,0 +1,10 @@
+% xa, ya, num_GCP=length()
+while False
+    
+    % calculate A (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
+        % calculate rot
+        % calculate N and D (OAX,OAY,OAZ,rot)
+    A = calc_A;
+        
+end
+    

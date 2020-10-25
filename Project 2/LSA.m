@@ -1,10 +1,12 @@
+% xa, ya, num_GCP=length(xa)
+xa = [];
+ya = [];
+num_GCP = length(xa);
+c = 0;
 while False
     
-    % calcualte rotation
-    rot = rotation(omega,phi,kappa)
-    
-    % calculate A (xa,ya,OAX,OAY,OAZ,kappa)
-        % calculate rot
-        % calculate N and D (OAX,OAY,OAZ,rot)
+    % calculate A (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
+    A = calc_A(num_GCP, c, OAX, OAY, OAZ, omega, phi, kappa);
+        
 end
     
