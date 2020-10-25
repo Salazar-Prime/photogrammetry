@@ -1,16 +1,24 @@
-% xa, ya, IOP = [xp, yp, c] num_GCP=length(xa), dist=[k1,k2,k3,p1,p2,p3]
-IOP = rand(3,1);
-dist = rand(6,1);
-xa = [];
-ya = [];
+function [EOP,e,sigma_hat,iter] = LSA(xa,ya,XA,YA,ZA,IOP,dist,EOP)
+%% parameters
+max_iter = 100;
+thres = 1e-2;
+sigma_hat = 0;
 num_GCP = length(xa);
-xp = IOP(1);
-yp = IOP(2);
- c = IOP(3);
 
-while False
+% Unpack EOPs and IOPs
+[X0,Y0,Z0,omega,phi,kappa] = update_EOP(EOP);
+[xp,yp,c] = assign_IOP(IOP);
+
+%% LSA iterations
+for iter=1:max_iter
+    
+    % update sigma_hat_prev 
+    sigma_hat_prev = sigma_hat;
     
     % OAX, OAY, OAZ
+    OAX = XA - X0;
+    OAY = YA - Y0;
+    OAZ = ZA - Z0;
     
     % calculate A_50x6 (num_GCP,c,OAX,OAY,OAZ,omega,phi,kappa)
     [A,Nx,Ny,D] = calc_A(num_GCP, c, OAX, OAY, OAZ, omega, phi, kappa);
@@ -23,6 +31,18 @@ while False
     x_hat = inv(A'*P*A)*A'*P*y;
     
     % update EOPs
-    omega = 
+    [X0,Y0,Z0,omega,phi,kappa] = update_EOP(x_hat);
+    
+    % calculate e and sigma_hat
+    e = y - A*x;
+    sigma_hat = (e'*P*e)/(num_GCP - length(x_hat));
+    
+    % break out of loop is threshold is reached
+    if abs(sigm_hat - sigma_hat_prev) < thres
+        break
+    end
+    
 end
+
+EOP = [X0,Y0,Z0,omega,phi,kappa];
     
