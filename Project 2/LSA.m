@@ -1,7 +1,7 @@
 function [EOP,e,sigma_hat,iter] = LSA(xa,ya,XA,YA,ZA,IOP,dist,EOP)
 %% parameters
 max_iter = 100;
-thres = 1e-2;
+thres = 1e-4;
 sigma_hat = 0;
 num_GCP = length(xa);
 
@@ -34,11 +34,11 @@ for iter=1:max_iter
     [X0,Y0,Z0,omega,phi,kappa] = update_EOP(x_hat);
     
     % calculate e and sigma_hat
-    e = y - A*x;
+    e = y - A*x_hat;
     sigma_hat = (e'*P*e)/(num_GCP - length(x_hat));
     
     % break out of loop is threshold is reached
-    if abs(sigm_hat - sigma_hat_prev) < thres
+    if abs(sigma_hat - sigma_hat_prev) < thres
         break
     end
     

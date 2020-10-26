@@ -4,11 +4,11 @@ function [y] = calc_y(dist,xa,ya,xp,yp,c,Nx,Ny,D)
 
 % unpack distortion parameters
 k1 = dist(1);
-k2 = dist(1);
-k3 = dist(1);
-p1 = dist(1);
-p2 = dist(1);
-p3 = dist(1);
+k2 = dist(2);
+k3 = dist(3);
+p1 = dist(4);
+p2 = dist(5);
+p3 = dist(6);
 
 % calculate x_bar, y_bar, r
 x_bar = xa - xp;
