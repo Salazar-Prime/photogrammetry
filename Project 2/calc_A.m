@@ -27,7 +27,7 @@ for i=1:num_GCP
     a3 = r(3,1)*D - r(3,3)*Nx;
     a4 = D*(r(3,1)*OAY(i) - r(2,1)*OAZ(i)) + Nx*(r(2,3)*OAZ(i) - r(3,3)*OAY(i));
     a5 = D*D*cos(kappa) - Nx*(-Nx*cos(kappa) + Ny*sin(kappa));
-    a6 = -1 * Ny/D;
+    a6 = -1 * Ny*D;
     
     % bij for ith GCP
     b1 = r(1,2)*D - r(1,3)*Ny;
@@ -35,7 +35,7 @@ for i=1:num_GCP
     b3 = r(3,2)*D - r(3,3)*Ny;
     b4 = D*(r(3,2)*OAY(i) - r(2,2)*OAZ(i)) + Ny*(r(2,3)*OAZ(i) - r(3,3)*OAY(i));
     b5 = -1*D*D*sin(kappa) - Ny*(-Nx*cos(kappa) + Ny*sin(kappa));
-    b6 = Nx/D;
+    b6 = Nx*D;
     
     % multipling by c/D^2 before appending into A
     A(2*i-1,:) = [a1,a2,a3,a4,a5,a6]*c/D^2;

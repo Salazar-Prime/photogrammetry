@@ -23,9 +23,12 @@ delta_yr =  y_bar .* (k1*r.^2 + k2*r.^4 + k3*r.^6);
 delta_xd = (1+p3*r.^2).*(p1*(r.^2 + 2*x_bar.^2) + 2*p2*x_bar.*y_bar);
 delta_yd = (1+p3*r.^2).*(2*p1*x_bar.*y_bar + p2*(r.^2 + 2*y_bar.^2));
 
-% calculate x_corr, y_corr
-x_corr = delta_xr - delta_xd;
-y_corr = delta_yr - delta_yd;
+% cremove distortions
+x_corr = xa - delta_xr - delta_xd;
+y_corr = ya - delta_yr - delta_yd;
+%% old distortion removal
+% x_corr = delta_xr - delta_xd;
+% y_corr = delta_yr - delta_yd;
 
 %% calcualte y
 
