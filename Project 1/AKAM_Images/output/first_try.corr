@@ -1,0 +1,29 @@
+Correlation Results
+-------------------
+
+5    11   Photo   65_01_20180803.jpg  ZO        Photo   65_02_20180803.jpg  ZO     0.990245    
+5    47   Photo   65_01_20180803.jpg  ZO        Photo   65_08_20180803.jpg  ZO     0.991286    
+5    53   Photo   65_01_20180803.jpg  ZO        Photo   65_10_20180803.jpg  ZO     0.990989    
+11   5    Photo   65_02_20180803.jpg  ZO        Photo   65_01_20180803.jpg  ZO     0.990245    
+11   47   Photo   65_02_20180803.jpg  ZO        Photo   65_08_20180803.jpg  ZO     0.992735    
+11   53   Photo   65_02_20180803.jpg  ZO        Photo   65_10_20180803.jpg  ZO     0.992757    
+11   65   Photo   65_02_20180803.jpg  ZO        Photo   65_12_20180803.jpg  ZO     0.990346    
+47   5    Photo   65_08_20180803.jpg  ZO        Photo   65_01_20180803.jpg  ZO     0.991286    
+47   11   Photo   65_08_20180803.jpg  ZO        Photo   65_02_20180803.jpg  ZO     0.992735    
+47   53   Photo   65_08_20180803.jpg  ZO        Photo   65_10_20180803.jpg  ZO     0.994823    
+47   65   Photo   65_08_20180803.jpg  ZO        Photo   65_12_20180803.jpg  ZO     0.99119     
+53   5    Photo   65_10_20180803.jpg  ZO        Photo   65_01_20180803.jpg  ZO     0.990989    
+53   11   Photo   65_10_20180803.jpg  ZO        Photo   65_02_20180803.jpg  ZO     0.992757    
+53   47   Photo   65_10_20180803.jpg  ZO        Photo   65_08_20180803.jpg  ZO     0.994823    
+53   65   Photo   65_10_20180803.jpg  ZO        Photo   65_12_20180803.jpg  ZO     0.991074    
+65   11   Photo   65_12_20180803.jpg  ZO        Photo   65_02_20180803.jpg  ZO     0.990346    
+65   47   Photo   65_12_20180803.jpg  ZO        Photo   65_08_20180803.jpg  ZO     0.99119     
+65   53   Photo   65_12_20180803.jpg  ZO        Photo   65_10_20180803.jpg  ZO     0.991074    
+65   83   Photo   65_12_20180803.jpg  ZO        Photo   65_15_20180803.jpg  ZO     0.990245    
+83   65   Photo   65_15_20180803.jpg  ZO        Photo   65_12_20180803.jpg  ZO     0.990245    
+89   95   Photo   65_16_20180803.jpg  ZO        Photo   65_18_20180803.jpg  ZO     0.991637    
+95   89   Photo   65_18_20180803.jpg  ZO        Photo   65_16_20180803.jpg  ZO     0.991637    
+118  190  Point   5                   X         Point   1                   X      0.999501    
+190  118  Point   1                   X         Point   5                   X      0.999501    
+
+12 Parameters are correlated
