@@ -1,4 +1,4 @@
-function [xa,ya] = remove_dist(xa,ya,dist)
+function [xa,ya] = remove_dist(xa,ya,dist,xp,yp)
 
 % unpack distortion parameters
 k1 = dist(1);
@@ -9,6 +9,8 @@ p2 = dist(5);
 p3 = dist(6);
 
 % calculate x_bar, y_bar, r
+xa = xa - xp;
+ya = ya - yp;
 r = sqrt(xa.^2 + ya.^2);
 
 % calculate delta_xr, delta_yr - radial distortion

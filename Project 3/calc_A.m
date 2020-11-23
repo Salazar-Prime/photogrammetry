@@ -1,4 +1,4 @@
-function [A] = calc_A(num_GCP,XA,YA,xa,ya)
+function [A] = calc_A(num_GCP,xa,ya,XA,YA)
 
 % create an empty A matrix 
 A = zeros(num_GCP*2,8);
