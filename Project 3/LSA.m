@@ -1,4 +1,4 @@
-function [c,EOP] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
+function [c,EOP,res_x,res_y] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
 %% parameters
 num_GCP = length(xa);
 
@@ -13,9 +13,6 @@ num_GCP = length(xa);
 %% calculate x_hat 
 
 [C1,C2,C3,C4,C5,C6,C7,C8] = calc_x_hat(A,y);
-
-%% debug residuals
-% debug(C1,C2,C3,C4,C5,C6,C7,C8,xa,ya,XA,YA);
 %% calculate c 
 c = sqrt(-1 * (C1*C2+C4*C5)/(C7*C8));
 if not(isreal(c))
@@ -33,6 +30,9 @@ Z0 = sqrt(A(3,3)/A(1,1) - X0^2 - Y0^2);
 S = calc_S(num_GCP,xa,ya,xp,yp,c,XA,YA,ZA,X0,Y0,Z0);
 [omega,phi,kappa] = calc_opk(S);
 EOP = [X0,Y0,Z0,rad2deg(omega),rad2deg(phi),rad2deg(kappa)];
+
+%% residuals
+[res_x,res_y] = residuals(C1,C2,C3,C4,C5,C6,C7,C8,xa,ya,XA,YA);
 end
 
 

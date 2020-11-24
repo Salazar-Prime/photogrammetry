@@ -12,17 +12,17 @@ ZA = [0.072640804133;0.048121990404;0;-0.047649472361;-0.070838477818;0.05410219
 %% Image 1 - image_09
 
 [EOP_basc,xa,ya] = data(9); % get data for image 9 
-[c,EOP] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
+[c,EOP,res_x,res_y] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
 %% Image 1 - image_10
 
 [EOP_basc,xa,ya] = data(10); % get data for image 10
-[c,EOP] = LSA(xa,ya,XA(1:24),YA(1:24),ZA(1:24),IOP,dist)
+[c,EOP,res_x,res_y] = LSA(xa,ya,XA(1:24),YA(1:24),ZA(1:24),IOP,dist)
 %% Image 1 - image_14
 
 [EOP_basc,xa,ya] = data(14); % get data for image 14 
-[c,EOP] = LSA(xa,ya,XA([3:5,7:10,12:15,17:20,22:25]),YA([3:5,7:10,12:15,17:20,22:25]),ZA([3:5,7:10,12:15,17:20,22:25]),IOP,dist);
+[c,EOP,res_x,res_y] = LSA(xa,ya,XA([3:5,7:10,12:15,17:20,22:25]),YA([3:5,7:10,12:15,17:20,22:25]),ZA([3:5,7:10,12:15,17:20,22:25]),IOP,dist);
 
 %% Image 1 - image_18
 
 [EOP_basc,xa,ya] = data(18); % get data for image 18
-[c,EOP] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
+[c,EOP,res_x,res_y] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
