@@ -15,10 +15,12 @@ num_GCP = length(xa);
 [C1,C2,C3,C4,C5,C6,C7,C8] = calc_x_hat(A,y);
 
 %% debug residuals
-debug(C1,C2,C3,C4,C5,C6,C7,C8,xa,ya,XA,YA);
+% debug(C1,C2,C3,C4,C5,C6,C7,C8,xa,ya,XA,YA);
 %% calculate c 
 c = sqrt(-1 * (C1*C2+C4*C5)/(C7*C8));
-% c = 8.1671200690;
+if not(isreal(c))
+    c = 8.1671200690; 
+end
 %% calculate A'*A
 A = [C1,C4,C7;C2,C5,C8;C3,C6,1]*[1,0,0;0,1,0;0,0,c*c]*[C1,C2,C3;C4,C5,C6;C7,C8,1];
 

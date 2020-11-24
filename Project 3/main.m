@@ -13,26 +13,16 @@ ZA = [0.072640804133;0.048121990404;0;-0.047649472361;-0.070838477818;0.05410219
 
 [EOP_basc,xa,ya] = data(9); % get data for image 9 
 [c,EOP] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
-
-% [EOP_9,e_9,sigma_hat_9,iter_9,D_9,EOP_history_9] = LSA(xa,ya,XA,YA,ZA,IOP,dist,EOP_i); % run LSA
-% [table_9_summary,table_9_D,table_9_hist] = results(EOP_i,EOP_9,D_9,EOP_basc,EOP_history_9,iter_9); % complie results
-
 %% Image 1 - image_10
 
-[EOP_basc,xa,ya] = data(10); % get data for image 10 
-[c,X0,Y0,Z0,omega,phi,kappa] = LSA(xa,ya,XA(1:24),YA(1:24),ZA(1:24),IOP,dist,EOP_i); % run LSA
-[table_10_summary,table_10_D,table_10_hist] = results(EOP_i,EOP_10,D_10,EOP_basc,EOP_history_10,iter_10); % complie results
-
+[EOP_basc,xa,ya] = data(10); % get data for image 10
+[c,EOP] = LSA(xa,ya,XA(1:24),YA(1:24),ZA(1:24),IOP,dist)
 %% Image 1 - image_14
 
 [EOP_basc,xa,ya] = data(14); % get data for image 14 
 [c,EOP] = LSA(xa,ya,XA([3:5,7:10,12:15,17:20,22:25]),YA([3:5,7:10,12:15,17:20,22:25]),ZA([3:5,7:10,12:15,17:20,22:25]),IOP,dist);
-% [EOP_14,e_14,sigma_hat_14,iter_14,D_14,EOP_history_14] = LSA(xa,ya,XA([3:5,7:10,12:15,17:20,22:25]),YA([3:5,7:10,12:15,17:20,22:25]),ZA([3:5,7:10,12:15,17:20,22:25]),IOP,dist,EOP_i); % run LSA
-% [table_14_summary,table_14_D,table_14_hist] = results(EOP_i,EOP_14,D_14,EOP_basc,EOP_history_14,iter_14); % complie results
 
 %% Image 1 - image_18
 
-[EOP_i,EOP_basc,xa,ya] = data(18); % get data for image 14 
-[c,X0,Y0,Z0] = LSA(xa,ya,XA,YA,ZA,IOP,dist,EOP_i);
-% [EOP_18,e_18,sigma_hat_18,iter_18,D_18,EOP_history_18] = LSA(xa,ya,XA,YA,ZA,IOP,dist,EOP_i); % run LSA
-% [table_18_summary,table_18_D,table_18_hist] = results(EOP_i,EOP_18,D_18,EOP_basc,EOP_history_14,iter_14); % complie results
+[EOP_basc,xa,ya] = data(18); % get data for image 18
+[c,EOP] = LSA(xa,ya,XA,YA,ZA,IOP,dist)
