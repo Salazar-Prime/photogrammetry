@@ -3,5 +3,11 @@
 % visible: 55,7-10,12-15,17-20
 clc; clear all;
 %% Linear Intersection - Images 4,5
-[IOP_4, dist_4, EOP_4, xa_4, ya_4] = data(4);
-[IOP_5, dist_5, EOP_5, xa_5, ya_5] = data(5);
+[IOP, dist, EOP_4, xa_4, ya_4] = data(4);
+[~,~,EOP_5, xa_5, ya_5] = data(5);
+[XI_1,YI_1,ZI_1] = linear_intersection(EOP_4,EOP_5,IOP,dist,xa_4,ya_4,xa_5,ya_5);
+
+%% Linear Intersection - Images 11,12
+[IOP, dist, EOP_11, xa_11, ya_11] = data(11);
+[~,~,EOP_12, xa_12, ya_12] = data(12);
+[XI_2,YI_2,ZI_2] = linear_intersection(EOP_11,EOP_12,IOP,dist,xa_11,ya_11,xa_12,ya_12);
