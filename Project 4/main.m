@@ -1,6 +1,6 @@
 % Author: Varun Aggarwal
 % images: 4,5 and 11,12
-% visible: 55,7-10,12-15,17-20
+% visible: 5,7-10,12-15,17-20
 clc; clear all;
 %% Linear Intersection - Images 4,5
 [IOP, dist, EOP_4, xa_4, ya_4] = data(4);
@@ -16,4 +16,7 @@ clc; clear all;
 [XI_3,YI_3,ZI_3] = multi_intersection(EOP_4,EOP_5,EOP_11,EOP_12,IOP,dist,xa_4,ya_4,xa_5,ya_5,xa_11,ya_11,xa_12,ya_12);
 
 %% results
-table_results = results(XI_1,YI_1,ZI_1,XI_2,YI_2,ZI_2,XI_3,YI_3,ZI_3);
+[table1,table2,table3] = results(XI_1,YI_1,ZI_1,XI_2,YI_2,ZI_2,XI_3,YI_3,ZI_3);
+writetable(table1,"table.xls","Sheet",1,'WriteRowNames',true);
+writetable(table2,"table.xls","Sheet",2,'WriteRowNames',true);
+writetable(table3,"table.xls","Sheet",3,'WriteRowNames',true);
